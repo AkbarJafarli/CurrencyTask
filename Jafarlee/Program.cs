@@ -618,24 +618,48 @@ namespace Jafarlee
 
             Console.WriteLine("Show recent currency rates");
             Console.ReadLine();
-            string[] currency = { "USD", "EUR", "AED", "TRY", "CZK", "CNY","IRR","CAD","MXN","UAH" };
+            string[] currency = { "USD", "EUR", "AED", "TRY", "CZK", "CNY", "IRR", "CAD", "MXN", "UAH" };
             int firstIdx1 = 0;
             int lastIdx1 = currency.Length - 1;
-            decimal[] rates = { 1.7000M, 1.8455M, 0.4628M, 0.0527M, 0.0748M, 0.2352M,0.0040M,1.2477M,0.1017M,0.0432M };
+            decimal[] rates = { 1.7000M, 1.8455M, 0.4628M, 0.0527M, 0.0748M, 0.2352M, 0.0040M, 1.2477M, 0.1017M, 0.0432M };
             int firstIdx2 = 0;
             int lastIdx2 = rates.Length - 1;
             while (true)
             {
-                Console.WriteLine(currency[firstIdx1]+"= " + rates[firstIdx2]);
+                Console.WriteLine(currency[firstIdx1] + "= " + rates[firstIdx2]);
                 firstIdx1++;
                 firstIdx2++;
-                if(firstIdx1>lastIdx1 & firstIdx1 > lastIdx2)
+                if (firstIdx1 > lastIdx1 & firstIdx1 > lastIdx2)
                 {
                     break;
                 }
-
-
             }
+            string currencyCode;
+            string[] Cods = { "USD", "EUR", "AED", "TRY", "CZK", "CNY", "IRR", "CAD", "MXN", "UAH" };
+            int firstCodsIdx = 0;
+            decimal[] codsRates = { 1.7000M, 1.8455M, 0.4628M, 0.0527M, 0.0748M, 0.2352M, 0.0040M, 1.2477M, 0.1017M, 0.0432M };
+            int codsRatesIdx = 0;
+            Console.WriteLine("Find currency rate by code ");
+            currencyCode = Console.ReadLine();
+            while (firstCodsIdx < Cods.Length - 1)
+            {
+                if (currencyCode == Cods[firstCodsIdx])
+                {
+                    Console.WriteLine(Cods[firstCodsIdx] + "= " + codsRates[codsRatesIdx]);
+                    break;
+                }
+                else
+                {
+                    firstCodsIdx++;
+                    codsRatesIdx++;
+                }
+            }
+            if (firstCodsIdx == Cods.Length - 1)
+            {
+                Console.WriteLine("This exchange rate was not found in the system");
+            }
+
+
         }
     }
 }
