@@ -107,14 +107,12 @@ namespace Jafarlee
                             lastCodesIdx++;
                             lastRatesIdx++;
                         }
-                        Console.WriteLine("");
-                        Console.Write("Enter to the menu...");
-                        Console.ReadLine();
-                        Console.Clear();
+                      
                     }
                     if (lastRatesIdx == lastCodes.Length)
                     {
                         Console.WriteLine("This exchange rate was not found in the system");
+
                     }
                     Console.WriteLine("");
                     Console.Write("Enter to the menu...");
