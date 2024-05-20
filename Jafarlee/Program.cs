@@ -616,50 +616,130 @@ namespace Jafarlee
             //==================================================================
             //==================================================================
 
-            Console.WriteLine("Show recent currency rates");
+            //Console.WriteLine("Show recent currency rates");
+            //Console.ReadLine();
+            //string[] currency = { "USD", "EUR", "AED", "TRY", "CZK", "CNY", "IRR", "CAD", "MXN", "UAH" };
+            //int firstIdx1 = 0;
+            //int lastIdx1 = currency.Length - 1;
+            //decimal[] rates = { 1.7000M, 1.8455M, 0.4628M, 0.0527M, 0.0748M, 0.2352M, 0.0040M, 1.2477M, 0.1017M, 0.0432M };
+            //int firstIdx2 = 0;
+            //int lastIdx2 = rates.Length - 1;
+            //while (true)
+            //{
+            //    Console.WriteLine(currency[firstIdx1] + "= " + rates[firstIdx2]);
+            //    firstIdx1++;
+            //    firstIdx2++;
+            //    if (firstIdx1 > lastIdx1 & firstIdx1 > lastIdx2)
+            //    {
+            //        break;
+            //    }
+            //}
+            //Console.WriteLine("==============================");
+            //string currencyCode;
+            //string[] Cods = { "USD", "EUR", "AED", "TRY", "CZK", "CNY", "IRR", "CAD", "MXN", "UAH" };
+            //int firstCodsIdx = 0;
+            //decimal[] codsRates = { 1.7000M, 1.8455M, 0.4628M, 0.0527M, 0.0748M, 0.2352M, 0.0040M, 1.2477M, 0.1017M, 0.0432M };
+            //int codsRatesIdx = 0;
+            //Console.WriteLine("Find currency rate by code ");
+            //currencyCode = Console.ReadLine();
+            //while (firstCodsIdx < Cods.Length - 1)
+            //{
+            //    if (currencyCode == Cods[firstCodsIdx])
+            //    {
+            //        Console.WriteLine(Cods[firstCodsIdx] + "= " + codsRates[codsRatesIdx]);
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        firstCodsIdx++;
+            //        codsRatesIdx++;
+            //    }
+
+            //}
+            //if (firstCodsIdx == Cods.Length - 1)
+            //{
+            //    Console.WriteLine("This exchange rate was not found in the system");
+            //}
+
+            //===================================================================================
+            //===================================================================================
+
+            string[] currencyCodes = { "USD", "EUR", "AED", "CZK", "CNY", "CAD", "MXN", "RUB", "TRY", "UAH" };
+            int currencyCodesIdx = 0;
+            decimal[] currencyRates = { 1.7000M, 1.8455M, 0.4628M, 0.0748M, 0.2352M, 1.2477M, 0.1017M, 0.0187M, 0.0527M, 0.0432M };
+            int currencyRatesIdx = 0;
+            Console.WriteLine("1)Show recent currency rates");
             Console.ReadLine();
-            string[] currency = { "USD", "EUR", "AED", "TRY", "CZK", "CNY", "IRR", "CAD", "MXN", "UAH" };
-            int firstIdx1 = 0;
-            int lastIdx1 = currency.Length - 1;
-            decimal[] rates = { 1.7000M, 1.8455M, 0.4628M, 0.0527M, 0.0748M, 0.2352M, 0.0040M, 1.2477M, 0.1017M, 0.0432M };
-            int firstIdx2 = 0;
-            int lastIdx2 = rates.Length - 1;
-            while (true)
+            while (currencyCodesIdx < currencyCodes.Length)
             {
-                Console.WriteLine(currency[firstIdx1] + "= " + rates[firstIdx2]);
-                firstIdx1++;
-                firstIdx2++;
-                if (firstIdx1 > lastIdx1 & firstIdx1 > lastIdx2)
+                Console.WriteLine(currencyCodes[currencyCodesIdx] + "= " + currencyRates[currencyRatesIdx]);
+                currencyCodesIdx++;
+                currencyRatesIdx++;
+                if (currencyCodesIdx > currencyCodes.Length - 1)
                 {
                     break;
                 }
             }
-            string currencyCode;
-            string[] Cods = { "USD", "EUR", "AED", "TRY", "CZK", "CNY", "IRR", "CAD", "MXN", "UAH" };
-            int firstCodsIdx = 0;
-            decimal[] codsRates = { 1.7000M, 1.8455M, 0.4628M, 0.0527M, 0.0748M, 0.2352M, 0.0040M, 1.2477M, 0.1017M, 0.0432M };
-            int codsRatesIdx = 0;
-            Console.WriteLine("Find currency rate by code ");
-            currencyCode = Console.ReadLine();
-            while (firstCodsIdx < Cods.Length - 1)
-            {
-                if (currencyCode == Cods[firstCodsIdx])
-                {
-                    Console.WriteLine(Cods[firstCodsIdx] + "= " + codsRates[codsRatesIdx]);
-                    break;
-                }
-                else
-                {
-                    firstCodsIdx++;
-                    codsRatesIdx++;
-                }
-            }
-            if (firstCodsIdx == Cods.Length - 1)
-            {
-                Console.WriteLine("This exchange rate was not found in the system");
-            }
+            //Console.WriteLine("=====================");
+            //Console.WriteLine("2)Find currency rate by code");
+            //string codes = Console.ReadLine();
+            //string[] currencyCodes2 = { "USD", "EUR", "AED", "CZK", "CNY", "CAD", "MXN", "RUB", "TRY", "UAH" };
+            //int currencyCodesIdx2 = 0;
+            //decimal[] currencyRates2 = { 1.7000M, 1.8455M, 0.4628M, 0.0748M, 0.2352M, 1.2477M, 0.1017M, 0.0187M, 0.0527M, 0.0432M };
+            //int currencyRatesIdx2 = 0;
+            //bool isExist = false;
+            //while (currencyCodesIdx2 < currencyCodes2.Length)
+            //{
+            //    if (codes == currencyCodes2[currencyCodesIdx2])
+            //    {
+            //        Console.WriteLine(currencyCodes2[currencyCodesIdx2] + "= " + currencyRates2[currencyRatesIdx2]);
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        currencyCodesIdx2++;
+            //        currencyRatesIdx2++;
+            //    }
+            //}
+            //if (currencyCodesIdx2 == currencyCodes2.Length)
+            //{
+            //    Console.WriteLine("This exchange rate was not found in the system");
+            //}
+            //Console.WriteLine("=====================");
 
-
+            //Console.WriteLine("3)Enter the amount");
+            //decimal amount;
+            //amount = decimal.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the exchange rate code");
+            //string excCode;
+            //excCode = Console.ReadLine();
+            //string[] lastCodes = { "USD", "EUR", "AED", "CZK", "CNY", "CAD", "MXN", "RUB", "TRY", "UAH" };
+            //int lastCodesIdx = 0;
+            //decimal[] lastRates = { 1.7000M, 1.8455M, 0.4628M, 0.0748M, 0.2352M, 1.2477M, 0.1017M, 0.0187M, 0.0527M, 0.0432M };
+            //int lastRatesIdx = 0;
+            //decimal sumAmount;
+            //while (lastCodesIdx < lastCodes.Length)
+            //{
+            //    if (excCode == lastCodes[lastCodesIdx])
+            //    {
+            //        sumAmount = amount * lastRates[lastCodesIdx];
+            //        Console.WriteLine(sumAmount);
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        lastCodesIdx++;
+            //        lastRatesIdx++;
+            //    }
+            //}
+            //if (lastRatesIdx == lastCodes.Length)
+            //{
+            //    Console.WriteLine("This exchange rate was not found in the system");
+            //}
         }
     }
 }
+
+
+
+
